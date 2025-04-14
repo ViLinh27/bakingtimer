@@ -8,8 +8,8 @@ const path = require('node:path')
 //creates/manages app window and lets us open in browser
 const createWindow = () => {
   const win = new BrowserWindow({
-    width: 800,
-    height: 600,
+    width: 1000,
+    height: 800,
     webPreferences: {
       preload: path.join(__dirname, 'preload.js')
     }
