@@ -1,3 +1,4 @@
+//functionality to app window
 //controls app's event lifecycle
 const { app, BrowserWindow } = require('electron')
 
