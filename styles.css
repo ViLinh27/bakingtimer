@@ -6,12 +6,19 @@
 
 body {
     font-family: "Pixelify Sans";
-    color:var(--outlineColor);
+    color: var(--outlineColor);
     background-color: var(--lightpink-Bg);
     background-image: url('/assets/bakingTimer-bg.png');
 }
 
 /*------ FONTS ------*/
+@font-face {
+    font-family: 'Pixelify Sans';
+    src: url('./fonts/Pixelify_Sans/PixelifySans-VariableFont_wght.ttf') format('truetype');
+    font-weight: 400 700;
+    font-style: normal;
+}
+
 .poppins-thin {
     font-family: "Poppins", sans-serif;
     font-weight: 100;
