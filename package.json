@@ -1,0 +1,26 @@
+{
+  "name": "baking-timer",
+  "version": "1.0.0",
+  "description": "This is a baking timer based on egg timer app by bizbunny on github",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ViLinh27/bakingtimer.git"
+  },
+  "keywords": [
+    "baking"
+  ],
+  "author": "Linh Nguyen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ViLinh27/bakingtimer/issues"
+  },
+  "homepage": "https://github.com/ViLinh27/bakingtimer#readme",
+  "devDependencies": {
+    "electron": "^35.1.5"
+  }
+}
