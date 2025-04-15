@@ -7,5 +7,12 @@ The project is mostly coded in the Javascript framework Electron for functionali
 ##The assets
 The art assets are drawn in Pixelorama. I wanted to keep on theme with the pixel art aesthetic, and Pixelorama is a drawing platform that allows you to draw in that style and is free on itch.io.
 
+I separated the image assets into folder by screen aside from the main background and frame.
+###Main background and frame
+![mainbackground](./assets/backingTimer-bg.png)
+
+###Start Screen
+###Picking which pastry 
+
 ##The rest of the code
 I started off, after installing Electron with the quick tutorial to get a base place app. once that worked, I could start stylizing with the Pixelify Sanas font provided by the google fonts api, and add a custom background for my baking timer app.
