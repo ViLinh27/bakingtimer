@@ -23,6 +23,10 @@ I separated the image assets into folder by screen aside from the main backgroun
 ![minimizeButton](./assets/bakingtimer-minbutton.png)
 
 ### Start Screen
+![Dog](./assets/startScreen/bgtimer-dog.png)
+![start button](./assets/startScreen/bgtimer-startbtn.png)
+![talk bubble](./assets/startScreen/talkbubble.png)
+
 ### Picking which pastry 
 
 ## The rest of the code
