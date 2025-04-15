@@ -8,8 +8,11 @@ The project is mostly coded in the Javascript framework Electron for functionali
 The art assets are drawn in Pixelorama. I wanted to keep on theme with the pixel art aesthetic, and Pixelorama is a drawing platform that allows you to draw in that style and is free on itch.io.
 
 I separated the image assets into folder by screen aside from the main background and frame.
-###Main background and frame
+###Main background assets
 ![mainbackground](./assets/backingTimer-bg.png)
+![mainframe](./assets/bakingTimer-frame.png)
+![exitButton](./assets/bakingtimer-exitbutton.png)
+![minimizeButton](./assets/bakingtimer-minbutton.png)
 
 ###Start Screen
 ###Picking which pastry 
