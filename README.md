@@ -40,6 +40,8 @@ I separated the image assets into folder by screen aside from the main backgroun
 
 #### Start button
 
+##### I'm also going to be using this as a baseplate button image for any other needed button
+
 ![start button](./assets/startScreen/bgtimer-startbtn.png)
 
 #### Talk bubble
