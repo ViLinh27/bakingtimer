@@ -11,7 +11,7 @@ I separated the image assets into folder by screen aside from the main backgroun
 ### Main background assets
 
 #### The main background
-![mainbackground](./assets/backingTimer-bg.png)
+![mainbackground](./assets/bakingTimer-bg.png)
 
 #### The main frame
 ![mainframe](./assets/bakingTimer-frame.png)
