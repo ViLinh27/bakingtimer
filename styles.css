@@ -6,6 +6,7 @@
 
 body {
     font-family: "Pixelify Sans";
+    text-align: center;
     color: var(--outlineColor);
     background-color: var(--lightpink-Bg);
     background-image: url('/assets/bakingTimer-bg.png');
