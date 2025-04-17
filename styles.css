@@ -11,6 +11,28 @@ body {
     background-color: var(--lightpink-Bg);
     background-image: url('/assets/bakingTimer-bg.png');
 }
+/*------ FRAME ------*/
+.app-frame{
+    position:relative;
+    width: 100vw;
+    height: 100vh;
+    overflow:hidden;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.frame-img{
+    position: absolute;
+    width: 1000px;
+    height: 800px;
+    object-fit: cover;
+    z-index: -1;
+    overflow:hidden;
+    /*-center the frame -*/
+    /* transform: translate(-50%);
+    left: 50%; */
+}
 
 /*------ FONTS ------*/
 @font-face {
