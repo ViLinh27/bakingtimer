@@ -19,6 +19,7 @@
 <body>
     <div class="app-frame">
         <!-- main window frame: -->
+        <h2 class="frame-text">Baking Timer</h2>
         <img src="./assets/bakingTimer-frame.png" alt="main_frame" class="frame-img"/>
         
         <!-- main controls-->
@@ -45,7 +46,7 @@
                             <p id="talkbubble-text">Time your bake for the best treat!</p>
                         </button>
 
-                        <img src="assets/startScreen/bgtimer-dog.png" class="decor-img" alt="dog mascot" />
+                        <img src="assets/startScreen/bgtimer-dog.png" class="decor-img" alt="dog mascot" id="dog-startmenu"/>
                     </div>
                     
                     <div class="interactive-content">
@@ -57,6 +58,21 @@
             </div>
 
             <!--selection screen-->
+            <div id="selection-screen">
+                <div class="content-wrapper">
+                    <div class="interactive-content">
+                        <h2>What are you baking?</h2>
+                    </div>
+                    <div class="interactive-content">
+                        <button class="selection-pastry" id="cookie"></button>
+                        <button class="selection-pastry" id="cake"></button>
+                    </div>
+                    <div class="interactive-content">
+                        <button class="selection-pastry" id="muffin"></button>
+                        <button class="selection-pastry" id="bread"></button>
+                    </div>
+                </div>
+            </div>
         </div>
 
     </div>

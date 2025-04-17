@@ -22,6 +22,14 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+}
+
+.frame-text {
+    top: 0;
+    color: var(--buttonTextColor);
+    font-size: 30px;
+    font-weight: 500;
 }
 
 .frame-img {
@@ -62,7 +70,7 @@ body {
 }
 
 .window-control:hover img,
-#start-btn:hover {
+#start-btn:hover,.selection-pastry:hover{
     transform: scale(1.1);
 }
 
@@ -83,11 +91,23 @@ body {
     position: relative;
 }
 
-/*------ SCREEN ASSETS------*/
-.interactive-content {
-    margin: 30px 0;
+#start-screen {
+    display: none;
 }
 
+#selection-screen {
+    display: block;
+}
+
+/*------ SCREEN ASSETS------*/
+.interactive-content {
+    margin: 0;
+    padding: 0;
+    /* background-color: yellow; */
+    transform: translateY(-20%);
+}
+
+/*--- Start Menu Assets---*/
 #start-btn {
     background-color: transparent !important;
     background-image: url('./assets/startScreen/bgtimer-startbtn.png');
@@ -100,25 +120,71 @@ body {
 }
 
 #talkbubble {
-    position: relative;
+    /* position: relative; */
     background-color: transparent !important;
     background-image: url('./assets/startScreen/talkbubble.png');
     font-family: "Pixelify Sans";
     color: var(--buttonTextColor);
     font-size: 24px;
     width: 360px;
-    height:188px;
-    border:none;
+    height: 188px;
+    border: none;
 }
 
 #talkbubble-text {
-    position: absolute;
+    /* background-color: yellow; */
+    /* position: absolute; */
     color: var(--buttonTextColor);
     font-size: 24px;
-    width: 360px;
-    height: 188px;
-    transform: translateX(-10%), translateY(-100%);
+    width: 230px;
+    transform: translateX(10%);
     z-index: 20;
+}
+
+#dog-startmenu {
+    padding-top: 50px;
+    /* background-color: yellow; */
+}
+
+/*---Selection Menu Assets ---*/
+#cookie {
+    background-color: transparent !important;
+    background-image: url('./assets/choicesScreen/cookie.png');
+    font-family: "Pixelify Sans";
+    color: var(--buttonTextColor);
+    width: 228px;
+    height: 160px;
+    border: none;
+}
+
+#cake {
+    background-color: transparent !important;
+    background-image: url('./assets/choicesScreen/cake.png');
+    font-family: "Pixelify Sans";
+    color: var(--buttonTextColor);
+    width: 316px;
+    height: 280px;
+    border: none;
+}
+
+#muffin {
+    background-color: transparent !important;
+    background-image: url('./assets/choicesScreen/muffin.png');
+    font-family: "Pixelify Sans";
+    color: var(--buttonTextColor);
+    width: 272px;
+    height: 252px;
+    border: none;
+}
+
+#bread {
+    background-color: transparent !important;
+    background-image: url('./assets/choicesScreen/bread.png');
+    font-family: "Pixelify Sans";
+    color: var(--buttonTextColor);
+    width: 324px;
+    height: 208px;
+    border: none;
 }
 
 /*------ FONTS ------*/
