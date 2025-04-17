@@ -70,7 +70,7 @@ body {
 }
 
 .window-control:hover img,
-#start-btn:hover{
+#start-btn:hover {
     transform: scale(1.1);
 }
 
@@ -101,6 +101,7 @@ body {
 
 /*------ SCREEN ASSETS------*/
 .interactive-content {
+    position: relative;
     margin: 0;
     padding: 0;
     /* background-color: yellow; */
@@ -147,15 +148,26 @@ body {
 }
 
 /*---Selection Menu Assets ---*/
-.screen-title{
+.screen-title {
     margin-bottom: 50px;
 }
-.selection-pastry{
+
+.selection-pastry {
     transform: scale(85%);
+    position: relative;
+    /* Add this to make the button a positioning context */
+    display: inline-block;
+    /* This helps with proper positioning */
 }
+
 .selection-pastry:hover{
     transform: scale(100%);
 }
+
+.selection-text {
+    display: none;
+}
+
 #cookie {
     background-color: transparent !important;
     background-image: url('./assets/choicesScreen/cookie.png');
@@ -194,6 +206,20 @@ body {
     width: 324px;
     height: 208px;
     border: none;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.3s ease-out;
 }
 
 /*------ FONTS ------*/
