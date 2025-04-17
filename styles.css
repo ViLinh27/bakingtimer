@@ -2,6 +2,7 @@
     --darkpink-Frame: #ce6ba7;
     --outlineColor: #a16f8d;
     --lightpink-Bg: #fdcdf1;
+    --buttonTextColor: #7d4f6a;
 }
 
 body {
@@ -60,7 +61,8 @@ body {
     margin: 15px;
 }
 
-.window-control:hover img {
+.window-control:hover img,
+#start-btn:hover {
     transform: scale(1.1);
 }
 
@@ -76,8 +78,47 @@ body {
     justify-content: center;
     align-items: center;
 }
-.content-wrapper{
+
+.content-wrapper {
     position: relative;
+}
+
+/*------ SCREEN ASSETS------*/
+.interactive-content {
+    margin: 30px 0;
+}
+
+#start-btn {
+    background-color: transparent !important;
+    background-image: url('./assets/startScreen/bgtimer-startbtn.png');
+    font-family: "Pixelify Sans";
+    color: var(--buttonTextColor);
+    font-size: 24px;
+    width: 296px;
+    height: 108px;
+    border: none;
+}
+
+#talkbubble {
+    position: relative;
+    background-color: transparent !important;
+    background-image: url('./assets/startScreen/talkbubble.png');
+    font-family: "Pixelify Sans";
+    color: var(--buttonTextColor);
+    font-size: 24px;
+    width: 360px;
+    height:188px;
+    border:none;
+}
+
+#talkbubble-text {
+    position: absolute;
+    color: var(--buttonTextColor);
+    font-size: 24px;
+    width: 360px;
+    height: 188px;
+    transform: translateX(-10%), translateY(-100%);
+    z-index: 20;
 }
 
 /*------ FONTS ------*/
