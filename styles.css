@@ -70,7 +70,7 @@ body {
 }
 
 .window-control:hover img,
-#start-btn:hover,.selection-pastry:hover{
+#start-btn:hover{
     transform: scale(1.1);
 }
 
@@ -147,6 +147,15 @@ body {
 }
 
 /*---Selection Menu Assets ---*/
+.screen-title{
+    margin-bottom: 50px;
+}
+.selection-pastry{
+    transform: scale(85%);
+}
+.selection-pastry:hover{
+    transform: scale(100%);
+}
 #cookie {
     background-color: transparent !important;
     background-image: url('./assets/choicesScreen/cookie.png');
