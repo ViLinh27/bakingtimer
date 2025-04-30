@@ -115,7 +115,9 @@ body {
     /* background-color: yellow; */
     transform: translateY(-20%);
 }
-
+/* .btn-text{
+    transform:translateX(-20px);
+} */
 /*--- Start Menu Assets---*/
 #start-btn {
     background-color: transparent !important;
@@ -224,7 +226,7 @@ body {
 
 .timer-controls {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     align-content: center;
@@ -232,7 +234,7 @@ body {
 
 #snooze-btn,
 #stop-btn,#bake-again-btn,#back-btn {
-    margin: 20px 0 0 40px;
+    /* margin: 20px 0 0 40px; */
     background-color: transparent !important;
     font-family: "Pixelify Sans";
     color: var(--buttonTextColor);
@@ -241,8 +243,8 @@ body {
     height: 108px;
     border: none;
     background-image: url("./assets/Working-Timing/bgtimer-Snoozebtn.png");
-    background-size: 244px 92px;
-    background-repeat: no-repeat;
+    /* background-size: 244px 92px;
+    background-repeat: no-repeat; */
 }
 #snooze-btn:hover,#stop-btn:hover{
     transform: scale(1.1);
