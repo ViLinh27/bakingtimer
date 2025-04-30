@@ -118,6 +118,12 @@ body {
 /* .btn-text{
     transform:translateX(-20px);
 } */
+#above-image_block{
+    margin-bottom: -30px;
+}
+.screen-text{
+    margin-bottom: 60px;
+}
 /*--- Start Menu Assets---*/
 #start-btn {
     background-color: transparent !important;
@@ -226,14 +232,14 @@ body {
 
 .timer-controls {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     align-content: center;
 }
 
 #snooze-btn,
-#stop-btn,#bake-again-btn,#back-btn {
+#stop-btn,#back-btn {
     /* margin: 20px 0 0 40px; */
     background-color: transparent !important;
     font-family: "Pixelify Sans";
@@ -246,10 +252,9 @@ body {
     /* background-size: 244px 92px;
     background-repeat: no-repeat; */
 }
-#snooze-btn:hover,#stop-btn:hover{
+#snooze-btn:hover,#stop-btn:hover,#back-btn{
     transform: scale(1.1);
 }
-
 @keyframes fadeIn {
     from {
         opacity: 0;

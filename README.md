@@ -70,7 +70,9 @@ I separated the image assets into folder by screen aside from the main backgroun
 
 ## What the screens will look like.
 
-I have designed the assets around the dimensions of the app and what each screen will ideally look like in the final product. Below are what I planned each screen to look like.
+I have designed the assets around the dimensions of the app and what each screen will ideally look like in the final product. Below are what I had planned each screen to look like.
+
+It was only during development I had realized I forgot crucial elements of this app, like the timing display, and some text to indicate to the user what was going on.
 
 ### The Start Screen
 
