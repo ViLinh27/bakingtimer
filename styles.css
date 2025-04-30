@@ -99,11 +99,11 @@ body {
     display: none;
 }
 
-#pastry-timer-screen{
-    display:block;
+#pastry-timer-screen {
+    display: block;
 }
 
-#pastry-timer_complete_screen{
+#pastry-timer_complete_screen {
     display: none;
 }
 
@@ -168,7 +168,7 @@ body {
     /* This helps with proper positioning */
 }
 
-.selection-pastry:hover{
+.selection-pastry:hover {
     transform: scale(100%);
 }
 
@@ -215,7 +215,37 @@ body {
     height: 208px;
     border: none;
 }
+
 /*---Timer Waiting Screen ---*/
+.timer-display {
+    font-size: 44px;
+    margin-bottom: 20px;
+}
+
+.timer-controls {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+#snooze-btn,
+#stop-btn {
+    margin-top: 20px;
+    background-color: transparent !important;
+    font-family: "Pixelify Sans";
+    color: var(--buttonTextColor);
+    font-size: 24px;
+    width: 296px;
+    height: 108px;
+    border: none;
+    background-image: url("./assets/Working-Timing/bgtimer-Snoozebtn.png");
+    background-size: contain;
+}
+#snooze-btn:hover,#stop-btn:hover{
+    transform: scale(1.1);
+}
 
 @keyframes fadeIn {
     from {
