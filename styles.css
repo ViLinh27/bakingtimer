@@ -96,7 +96,15 @@ body {
 }
 
 #selection-screen {
-    display: block;
+    display: none;
+}
+
+#pastry-timer-screen{
+    display:block;
+}
+
+#pastry-timer_complete_screen{
+    display: none;
 }
 
 /*------ SCREEN ASSETS------*/
@@ -207,6 +215,7 @@ body {
     height: 208px;
     border: none;
 }
+/*---Timer Waiting Screen ---*/
 
 @keyframes fadeIn {
     from {
