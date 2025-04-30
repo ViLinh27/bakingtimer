@@ -216,7 +216,7 @@ body {
     border: none;
 }
 
-/*---Timer Waiting Screen ---*/
+/*---Timer Waiting/complete Screen ---*/
 .timer-display {
     font-size: 44px;
     margin-bottom: 20px;
@@ -231,8 +231,8 @@ body {
 }
 
 #snooze-btn,
-#stop-btn {
-    margin-top: 20px;
+#stop-btn,#bake-again-btn,#back-btn {
+    margin: 20px 0 0 40px;
     background-color: transparent !important;
     font-family: "Pixelify Sans";
     color: var(--buttonTextColor);
@@ -241,7 +241,8 @@ body {
     height: 108px;
     border: none;
     background-image: url("./assets/Working-Timing/bgtimer-Snoozebtn.png");
-    background-size: contain;
+    background-size: 244px 92px;
+    background-repeat: no-repeat;
 }
 #snooze-btn:hover,#stop-btn:hover{
     transform: scale(1.1);
