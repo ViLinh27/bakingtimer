@@ -68,6 +68,26 @@ I separated the image assets into folder by screen aside from the main backgroun
 
 ![muffin button](./assets/choicesScreen/muffin.png)
 
+## What the screens will look like.
+
+I have designed the assets around the dimensions of the app and what each screen will ideally look like in the final product. Below are what I planned each screen to look like.
+
+### The Start Screen
+
+![start screen target](./assets/bakingTimer-startMenu.png)
+
+### Pastry Choice Menu Screen
+
+![choice menu screen](./assets/bakingTimer-choiceMenu.png)
+
+### Timer Waiting Screen
+
+![timer waiting screen](./assets/bakingTimer-waitingTimerMenu.png)
+
+### Timer Complete Screen
+
+![timer complete screen](./assets/bakingTimer-DoneTimerMenu.png)
+
 ## The rest of the code
 
 I started off, after installing Electron with the quick tutorial to get a base place app. once that worked, I could start stylizing with the Pixelify Sanas font provided by the google fonts api, and add a custom background for my baking timer app.
