@@ -92,4 +92,6 @@ It was only during development I had realized I forgot crucial elements of this 
 
 ## The rest of the code
 
-I started off, after installing Electron with the quick tutorial to get a base place app. once that worked, I could start stylizing with the Pixelify Sanas font provided by the google fonts api, and add a custom background for my baking timer app.
+I started off, after installing Electron with the quick tutorial, getting a base place app. Once that worked, I could start stylizing with the Pixelify Sans font provided by the google fonts api, and add a custom background for my baking timer app.
+
+All the art assets are designed by me in Pixelorama, a free pixel art app on itch.io. I would stylize the base plate app of each screen the best I could using the templates I made for myself shown above. Once each screen looked the way I planned it to. Then came coding the functionality.
