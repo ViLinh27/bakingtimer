@@ -22,4 +22,9 @@ const timerWaitingScreen = document.getElementById('pastry-timer-screen');
 const timerCompleteScreen = document.getElementById('pastry-timer_complete_screen')
 
 //screen buttons
+const startBtn = document.getElementById('start-btn');
+const backBtn = document.getElementById('back-btn');
+const snoozeTimerBtn = document.getElementById('snooze-btn');
+
+//animation variables
 

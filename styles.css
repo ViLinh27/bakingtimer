@@ -239,6 +239,7 @@ body {
 }
 
 #snooze-btn,
+#snooze-alarm-btn,
 #stop-btn,#back-btn {
     /* margin: 20px 0 0 40px; */
     background-color: transparent !important;
@@ -252,7 +253,7 @@ body {
     /* background-size: 244px 92px;
     background-repeat: no-repeat; */
 }
-#snooze-btn:hover,#stop-btn:hover,#back-btn{
+#snooze-btn:hover,#snooze-alarm-btn:hover,#stop-btn:hover,#back-btn{
     transform: scale(1.1);
 }
 @keyframes fadeIn {
