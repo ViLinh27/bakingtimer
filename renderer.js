@@ -17,5 +17,9 @@ document.getElementById('exit-btn').addEventListener('click',()=>{
 
 //main screens
 const mainscreen =document.getElementById('start-btn');
+const selectionScreen = document.getElementById('selection-screen');
+const timerWaitingScreen = document.getElementById('pastry-timer-screen');
+const timerCompleteScreen = document.getElementById('pastry-timer_complete_screen')
 
 //screen buttons
+
