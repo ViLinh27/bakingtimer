@@ -11,3 +11,11 @@ document.getElementById('min-btn').addEventListener('click',()=>{
     ipcRenderer.send('minimize-window');
 });
 //exit btn
+document.getElementById('exit-btn').addEventListener('click',()=>{
+    ipcRenderer.send('close-window');
+});
+
+//main screens
+const mainscreen =document.getElementById('start-btn');
+
+//screen buttons
