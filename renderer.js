@@ -28,3 +28,5 @@ const snoozeTimerBtn = document.getElementById('snooze-btn');
 
 //animation variables
 
+//
+
