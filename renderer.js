@@ -69,5 +69,13 @@ function formatTime(seconds){
 
 //show only selected screen
 function showScreen(screenName){
+    mainscreen.style.display = 'none';
+    selectionScreen.style.display = 'none';
+    timerWaitingScreen.display = 'none';
+    timerCompleteScreen.display = 'none';
+
+    if(screenName ==='main'){
+        mainscreen.style.display = 'block';
+    }
     
 }
