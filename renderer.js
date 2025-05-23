@@ -25,8 +25,49 @@ const timerCompleteScreen = document.getElementById('pastry-timer_complete_scree
 const startBtn = document.getElementById('start-btn');
 const backBtn = document.getElementById('back-btn');
 const snoozeTimerBtn = document.getElementById('snooze-btn');
-
+const stopBtn = document.getElementById('stop-btn');
 //animation variables
 
-//
+let currentFrame = 0;
+let animationInterval;
+let isPaused = false;
+let ringSound = null;
 
+//start/ stop controls
+
+function togglePause(){
+    isPaused = !isPaused;
+
+    snoozeTimerBtn.textContent = isPaused ? 'Resume': 'Pause';
+
+    if(isPaused){
+        remainingTimeWhenPaused = timeLeft;
+    }
+}
+
+//clean up
+
+stopBtn.addEventListener('click',()=>{
+    clearInterval(timer);
+    showScreen('main');
+});
+
+//timer display
+
+const timerDisplay = document.getElementById('timer-display');
+
+let timer;
+let timeLeft = 0;
+let remainingTimeWhenPaused= 0;
+
+//format seconds into mm:ss
+function formatTime(seconds){
+    const mins = Math.floor(seconds/60).toString().padStart(2,'0');//adds extra padding to string(padstart)
+    const secs = (second % 60).toString().padStart(2,'0');
+    return '$(mins):$(secs)';
+}
+
+//show only selected screen
+function showScreen(screenName){
+    
+}
