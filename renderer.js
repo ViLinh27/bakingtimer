@@ -91,4 +91,11 @@ function showScreen(screenName){
 function startCountDown(selectedDuration){
     duration = selectedDuration;
     clearInterval(timer);
+
+    isPaused = false;
+    timeLeft = duration;
+    timerDisplay.textContent = formatTime(timeLeft);
+    showScreen('timer');
+
+    
 }
