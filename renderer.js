@@ -77,5 +77,18 @@ function showScreen(screenName){
     if(screenName ==='main'){
         mainscreen.style.display = 'block';
     }
-    
+    if(screenName ==='selection'){
+        selectionScreen.style.display = 'block';
+    }
+    if(screenName ==='timer'){
+        timerWaitingScreen.style.display = 'block';
+    }
+    if(screenName ==='completion'){
+        timerCompleteScreen.style.display = 'block';
+    }
+}
+
+function startCountDown(selectedDuration){
+    duration = selectedDuration;
+    clearInterval(timer);
 }
