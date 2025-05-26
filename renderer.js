@@ -26,7 +26,10 @@ const startBtn = document.getElementById('start-btn');
 const backBtn = document.getElementById('back-btn');
 const snoozeTimerBtn = document.getElementById('snooze-btn');
 const stopBtn = document.getElementById('stop-btn');
-//animation variables
+const cookAgainBtn = document.getElementById('bake-again-btn')
+const exitbtn = document.getElementById('exit-btn');
+snoozealarmbtn = document.getElementById('snooze-alarm-btn');
+//animation variables;
 
 let currentFrame = 0;
 let animationInterval;
@@ -165,5 +168,10 @@ stopBtn.addEventListener('click',()=>{
 });
 
 snoozeTimerBtn.addEventListener('click',()=>{
-    
+    playPopSound();
+    togglePause();
+});
+
+cookAgainBtn.addEventListener('click',()=>{
+
 });
