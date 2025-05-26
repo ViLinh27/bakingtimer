@@ -95,3 +95,9 @@ It was only during development I had realized I forgot crucial elements of this 
 I started off, after installing Electron with the quick tutorial, getting a base place app. Once that worked, I could start stylizing with the Pixelify Sans font provided by the google fonts api, and add a custom background for my baking timer app.
 
 All the art assets are designed by me in Pixelorama, a free pixel art app on itch.io. I would stylize the base plate app of each screen the best I could using the templates I made for myself shown above. Once each screen looked the way I planned it to. Then came coding the functionality.
+
+## sound attribution
+
+Pop 9 by D.S.G. -- https://freesound.org/s/328119/ -- License: Creative Commons 0
+
+Alarm Clock Digital by zanox -- https://freesound.org/s/233645/ -- License: Attribution NonCommercial 4.0

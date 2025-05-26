@@ -128,3 +128,15 @@ function togglePause(){
 }
 
 //play a sound?
+function playPopSound(){
+    const popSound = document.getElementById('pop-sound');
+    popSound.currentTime = 0;// rewind to start
+    popSound.play();
+}
+function playAlarmSound(){
+    ringSound = document.getElementById('alarm-sound');
+    ringSound = currentTime = 0;//rewind to start
+    ringSound.loop = true;//loop sound until stops
+    ringSound.play();
+} 
+
