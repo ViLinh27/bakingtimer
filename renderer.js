@@ -140,3 +140,30 @@ function playAlarmSound(){
     ringSound.play();
 } 
 
+function stopAlarmSound(){
+    if(ringSound){
+        ringSound.pause();
+        ringSound.currentTime = 0;//rewind back to start
+    }
+}
+
+//event listeners
+startBtn.addEventListener('click',()=>{
+    playPopSound();
+    showScreen('selection');
+});
+
+backBtn.addEventListener('click',()=>{
+    playPopSound();
+    showScreen('main');
+});
+
+stopBtn.addEventListener('click',()=>{
+    playPopSound();
+    clearInterval(timer);
+    showScreen('main');
+});
+
+snoozeTimerBtn.addEventListener('click',()=>{
+    
+});
