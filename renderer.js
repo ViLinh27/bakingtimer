@@ -172,6 +172,9 @@ snoozeTimerBtn.addEventListener('click',()=>{
     togglePause();
 });
 
-cookAgainBtn.addEventListener('click',()=>{
-
+cookAgainBtn.addEventListener('click',()=>{///maybe get rid of this button
+    playPopSound();
+    stopAlarmSound();
+    showScreen('main');
 });
+
