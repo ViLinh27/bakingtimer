@@ -97,5 +97,34 @@ function startCountDown(selectedDuration){
     timerDisplay.textContent = formatTime(timeLeft);
     showScreen('timer');
 
-    
+    timer = setInterval(()=>{
+        if(!isPaused && timeLeft >0){
+            //countdown
+            timeLeft--;
+            timerDisplay.textContent = formatTime(timeLeft);
+
+            if(timeLeft <=0){
+                playAlarmSound();
+                new Notification('Baking Timer',{
+                    body: 'Your sweet treat is ready :D'
+                });
+                showScreen('completion');
+            }
+        }
+    },1000);//note the number of milliseconds to wait before callback
 }
+
+//pause /resume the timer
+function togglePause(){
+    isPaused = !isPaused;
+    
+    if(isPaused){
+        snoozeTimerBtn.textContent = 'Resume';
+        remainingTimeWhenPaused = timeLeft;
+    }
+    else{
+        snoozeTimerBtn.textContent = 'Snooze';
+    }
+}
+
+//play a sound?
