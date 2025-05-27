@@ -175,11 +175,11 @@ cookAgainBtn.addEventListener('click',()=>{///maybe get rid of this button
     stopAlarmSound();
     showScreen('main');
 });
-
+/* 
 exitbtn.addEventListener('click',()=>{
     playPopSound();
     ipcRenderer.send('exit-app');//sends async message for getting out of app
-});
+}); */
 
 treatOptions.forEach(option =>{
     option.addEventListener('click', ()=>{
