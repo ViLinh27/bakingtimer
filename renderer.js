@@ -16,7 +16,7 @@ document.getElementById('exit-btn').addEventListener('click',()=>{
 });
 
 //main screens
-const mainscreen =document.getElementById('start-btn');
+const mainscreen =document.getElementById('start-screen');
 const selectionScreen = document.getElementById('selection-screen');
 const timerWaitingScreen = document.getElementById('pastry-timer-screen');
 const timerCompleteScreen = document.getElementById('pastry-timer_complete_screen')
@@ -28,6 +28,7 @@ const snoozeTimerBtn = document.getElementById('snooze-btn');
 const stopBtn = document.getElementById('stop-btn');
 const cookAgainBtn = document.getElementById('bake-again-btn')
 const exitbtn = document.getElementById('exit-btn');
+const treatOptions = document.querySelectorAll('.selection-pastry');
 snoozealarmbtn = document.getElementById('snooze-alarm-btn');
 //animation variables;
 
@@ -74,8 +75,8 @@ function formatTime(seconds){
 function showScreen(screenName){
     mainscreen.style.display = 'none';
     selectionScreen.style.display = 'none';
-    timerWaitingScreen.display = 'none';
-    timerCompleteScreen.display = 'none';
+    timerWaitingScreen.style.display = 'none';
+    timerCompleteScreen.style.display = 'none';
 
     if(screenName ==='main'){
         mainscreen.style.display = 'block';
@@ -178,3 +179,29 @@ cookAgainBtn.addEventListener('click',()=>{///maybe get rid of this button
     showScreen('main');
 });
 
+exitbtn.addEventListener('click',()=>{
+    playPopSound;
+    ipcRenderer.send('exit-app');//sends async message for getting out of app
+});
+
+treatOptions.forEach(option =>{
+    option.addEventListener('click', ()=>{
+        playPopSound();
+        const duration = parseInt(option.getAttribute('data-time'));
+        startCountDown(duration);
+    });
+});
+
+snoozealarmbtn.addEventListener('click', ()=>{
+   playPopSound();//for feedback
+   stopAlarmSound();//stop the ringing 
+
+   snoozealarmbtn.textContent = 'Alarm has Stopped'; //show user alarm off
+
+   setTimeout(() => {
+        snoozealarmbtn.textContent = 'Snooze';
+   }, 2000);
+});
+
+//initiazlie the app
+showScreen('main');

@@ -101,3 +101,13 @@ All the art assets are designed by me in Pixelorama, a free pixel art app on itc
 Pop 9 by D.S.G. -- https://freesound.org/s/328119/ -- License: Creative Commons 0
 
 Alarm Clock Digital by zanox -- https://freesound.org/s/233645/ -- License: Attribution NonCommercial 4.0
+
+## recipes used for baking time
+
+cookies: https://joyfoodsunshine.com/the-most-amazing-chocolate-chip-cookies/
+
+cake: https://www.allrecipes.com/recipe/17481/simple-white-cake/
+
+muffin: https://smittenkitchen.com/2010/08/perfect-blueberry-muffins/
+
+bread: https://sallysbakingaddiction.com/homemade-artisan-bread/print/80079/
