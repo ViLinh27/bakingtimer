@@ -3,17 +3,7 @@
 ////such as using webpack to bundle and minify your code or React to manage your user interfaces.
 
 //guessing I need this for the app to even do anything functionally:
-const { ipcRenderer } = require('electron');
-
-//main window controls:
-//min btn
-document.getElementById('min-btn').addEventListener('click',()=>{
-    ipcRenderer.send('minimize-window');
-});
-//exit btn
-document.getElementById('exit-btn').addEventListener('click',()=>{
-    ipcRenderer.send('close-window');
-});
+// const { ipcRenderer } = require('electron');
 
 //main screens
 const mainscreen =document.getElementById('start-screen');
@@ -29,11 +19,32 @@ const stopBtn = document.getElementById('stop-btn');
 const cookAgainBtn = document.getElementById('bake-again-btn')
 const exitbtn = document.getElementById('exit-btn');
 const treatOptions = document.querySelectorAll('.selection-pastry');
-snoozealarmbtn = document.getElementById('snooze-alarm-btn');
+const snoozealarmbtn = document.getElementById('snooze-alarm-btn');
 //animation variables;
 
-let currentFrame = 0;
-let animationInterval;
+// let currentFrame = 0;
+// let animationInterval;
+
+//main window controls:
+//min btn
+document.getElementById('min-btn').addEventListener('click',()=>{
+    // ipcRenderer.send('minimize-window');
+    playPopSound();
+    window.electronAPI.minimizeWindow()
+});
+//exit btn
+exitbtn.addEventListener('click', ()=>{
+    playPopSound();
+    window.electronAPI.exitApp()
+})
+
+//timer display
+
+const timerDisplay = document.querySelector('.timer-display');
+
+let timer;
+let timeLeft = 0;
+let remainingTimeWhenPaused= 0;
 let isPaused = false;
 let ringSound = null;
 
@@ -56,19 +67,11 @@ stopBtn.addEventListener('click',()=>{
     showScreen('main');
 });
 
-//timer display
-
-const timerDisplay = document.getElementById('timer-display');
-
-let timer;
-let timeLeft = 0;
-let remainingTimeWhenPaused= 0;
-
 //format seconds into mm:ss
 function formatTime(seconds){
-    const mins = Math.floor(seconds/60).toString().padStart(2,'0');//adds extra padding to string(padstart)
-    const secs = (second % 60).toString().padStart(2,'0');
-    return '$(mins):$(secs)';
+    const mins = Math.floor(seconds /60).toString().padStart(2,'0');//adds extra padding to string(padstart)
+    const secs = (seconds % 60).toString().padStart(2,'0');
+    return `${mins}:${secs}`;//back ticks instead of single quotes
 }
 
 //show only selected screen
@@ -78,18 +81,10 @@ function showScreen(screenName){
     timerWaitingScreen.style.display = 'none';
     timerCompleteScreen.style.display = 'none';
 
-    if(screenName ==='main'){
-        mainscreen.style.display = 'block';
-    }
-    if(screenName ==='selection'){
-        selectionScreen.style.display = 'block';
-    }
-    if(screenName ==='timer'){
-        timerWaitingScreen.style.display = 'block';
-    }
-    if(screenName ==='completion'){
-        timerCompleteScreen.style.display = 'block';
-    }
+    if (screenName === 'main') mainscreen.style.display = 'block'
+    if (screenName === 'selection') selectionScreen.style.display = 'block'
+    if (screenName === 'timer') timerWaitingScreen.style.display = 'block'
+    if (screenName === 'completion') timerCompleteScreen.style.display = 'block'
 }
 
 function startCountDown(selectedDuration){
@@ -119,7 +114,7 @@ function startCountDown(selectedDuration){
 }
 
 //pause /resume the timer
-function togglePause(){
+/* function togglePause(){
     isPaused = !isPaused;
     
     if(isPaused){
@@ -129,17 +124,18 @@ function togglePause(){
     else{
         snoozeTimerBtn.textContent = 'Snooze';
     }
-}
+} */
 
 //play a sound?
 function playPopSound(){
     const popSound = document.getElementById('pop-sound');
     popSound.currentTime = 0;// rewind to start
-    popSound.play();
+    popSound.play().catch(e => console.error('Error playing pop sound', e))
 }
+
 function playAlarmSound(){
     ringSound = document.getElementById('alarm-sound');
-    ringSound = currentTime = 0;//rewind to start
+    ringSound.currentTime = 0;//rewind to start
     ringSound.loop = true;//loop sound until stops
     ringSound.play();
 } 
@@ -153,6 +149,7 @@ function stopAlarmSound(){
 
 //event listeners
 startBtn.addEventListener('click',()=>{
+    console.log('Start button clicked');//debug
     playPopSound();
     showScreen('selection');
 });
@@ -180,7 +177,7 @@ cookAgainBtn.addEventListener('click',()=>{///maybe get rid of this button
 });
 
 exitbtn.addEventListener('click',()=>{
-    playPopSound;
+    playPopSound();
     ipcRenderer.send('exit-app');//sends async message for getting out of app
 });
 

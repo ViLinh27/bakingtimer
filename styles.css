@@ -95,16 +95,10 @@ body {
     display: block;
 }
 
-#selection-screen {
-    display: block;
-}
-
-#pastry-timer-screen {
-    display: block;
-}
-
+#selection-screen,
+#pastry-timer-screen,
 #pastry-timer_complete_screen {
-    display: block;
+    display: none;
 }
 
 /*------ SCREEN ASSETS------*/
@@ -115,15 +109,18 @@ body {
     /* background-color: yellow; */
     transform: translateY(-20%);
 }
+
 /* .btn-text{
     transform:translateX(-20px);
 } */
-#above-image_block{
+#above-image_block {
     margin-bottom: -30px;
 }
-.screen-text{
+
+.screen-text {
     margin-bottom: 60px;
 }
+
 /*--- Start Menu Assets---*/
 #start-btn {
     background-color: transparent !important;
@@ -134,6 +131,11 @@ body {
     width: 296px;
     height: 108px;
     border: none;
+}
+
+#start-btn p{
+    position:relative;
+    z-index: 10;
 }
 
 #talkbubble {
@@ -240,7 +242,8 @@ body {
 
 #snooze-btn,
 #snooze-alarm-btn,
-#stop-btn,#back-btn {
+#stop-btn,
+#back-btn {
     /* margin: 20px 0 0 40px; */
     background-color: transparent !important;
     font-family: "Pixelify Sans";
@@ -253,9 +256,14 @@ body {
     /* background-size: 244px 92px;
     background-repeat: no-repeat; */
 }
-#snooze-btn:hover,#snooze-alarm-btn:hover,#stop-btn:hover,#back-btn{
+
+#snooze-btn:hover,
+#snooze-alarm-btn:hover,
+#stop-btn:hover,
+#back-btn {
     transform: scale(1.1);
 }
+
 @keyframes fadeIn {
     from {
         opacity: 0;

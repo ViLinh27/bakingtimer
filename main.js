@@ -11,10 +11,26 @@ const createWindow = () => {
     width: 1000,
     height: 800,
     webPreferences: {
-      preload: path.join(__dirname, 'preload.js')
+      preload: path.join(__dirname, 'preload.js'),
+      nodeIntegration: false, //should be false for security
+      contextIsolation: true //should be true for security
     },
 
     resizable:false,
+  })
+
+  const {ipcMain} = require('electron')
+
+  ipcMain.on('minimize-window', ()=>{
+    win.minimize();
+  })
+
+  ipcMain.on('close-window', ()=>{
+    win.close()
+  })
+
+  ipcMain.on('exit-app', ()=>{
+    app.quit()
   })
 
   win.loadFile('index.html')
