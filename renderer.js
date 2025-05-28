@@ -41,6 +41,7 @@ exitbtn.addEventListener('click', ()=>{
 //timer display
 
 const timerDisplay = document.querySelector('.timer-display');
+const pastryNameDisplay = document.querySelector('.pastryText');
 
 let timer;
 let timeLeft = 0;
@@ -94,13 +95,14 @@ function showScreen(screenName){
     console.log('timerCompleteScreen display: ',timerCompleteScreen.style.display);//debug
 }
 
-function startCountDown(selectedDuration){
+function startCountDown(selectedDuration, pastryText){
     duration = selectedDuration;
     clearInterval(timer);
 
     isPaused = false;
     timeLeft = duration;
     timerDisplay.textContent = formatTime(timeLeft);
+    pastryNameDisplay.textContent = pastryText;
     showScreen('timer');
 
     timer = setInterval(()=>{
@@ -193,7 +195,13 @@ treatOptions.forEach(option =>{
     option.addEventListener('click', ()=>{
         playPopSound();
         const duration = parseInt(option.getAttribute('data-time'));
-        startCountDown(duration);
+
+        const pastryId = option.id;
+        const pastryTextElement = document.getElementById(`selection-text_${pastryId}`);
+        const pastryText = pastryTextElement ? pastryTextElement.textContent : '';
+
+
+        startCountDown(duration,pastryText);
     });
 });
 
@@ -202,6 +210,7 @@ snoozealarmbtn.addEventListener('click', ()=>{
    stopAlarmSound();//stop the ringing 
 
    snoozealarmbtn.textContent = 'Alarm has Stopped'; //show user alarm off
+   pastryNameDisplay.textContent = '';
 
    setTimeout(() => {
         snoozealarmbtn.textContent = 'Snooze';
