@@ -16,7 +16,7 @@ const startBtn = document.getElementById('start-btn');
 const backBtn = document.getElementById('back-btn');
 const snoozeTimerBtn = document.getElementById('snooze-btn');
 const stopBtn = document.getElementById('stop-btn');
-const cookAgainBtn = document.getElementById('bake-again-btn')
+// const cookAgainBtn = document.getElementById('bake-again-btn')
 const exitbtn = document.getElementById('exit-btn');
 const treatOptions = document.querySelectorAll('.selection-pastry');
 const snoozealarmbtn = document.getElementById('snooze-alarm-btn');
@@ -178,11 +178,11 @@ snoozeTimerBtn.addEventListener('click',()=>{
     togglePause();
 });
 
-cookAgainBtn.addEventListener('click',()=>{///maybe get rid of this button
+/* cookAgainBtn.addEventListener('click',()=>{///maybe get rid of this button
     playPopSound();
     stopAlarmSound();
     showScreen('main');
-});
+}); */
 /* 
 exitbtn.addEventListener('click',()=>{
     playPopSound();
