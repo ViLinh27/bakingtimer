@@ -134,6 +134,7 @@ body {
     height: 108px;
     border: none;
 }
+
 /* 
 #start-btn p {
     position: relative;
@@ -184,8 +185,18 @@ body {
     transform: scale(100%);
 }
 
+.selected-text_container,
 .selection-text {
     display: none;
+}
+
+.pastryText-display {
+    margin-top: 10px;
+    /* Adjust as needed */
+    font-size: 18px;
+    /* Adjust as needed */
+    color: var(--buttonTextColor);
+    transform: translateY(-20%);
 }
 
 #cookie {
