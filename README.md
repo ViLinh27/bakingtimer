@@ -96,6 +96,10 @@ I started off, after installing Electron with the quick tutorial, getting a base
 
 All the art assets are designed by me in Pixelorama, a free pixel art app on itch.io. I would stylize the base plate app of each screen the best I could using the templates I made for myself shown above. Once each screen looked the way I planned it to. Then came coding the functionality.
 
+### Code issues I faced
+
+I came to a point where the app worked in the browser just fine, but when launching the app via npm, the functionality was gone. Some sources mention its how Electron works with its security. It's the contextisolation part. The renderer doesn't have access to Node.js but preload is supposed to fix that.
+
 ## sound attribution
 
 Pop 9 by D.S.G. -- https://freesound.org/s/328119/ -- License: Creative Commons 0
