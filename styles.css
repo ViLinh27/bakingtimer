@@ -198,6 +198,7 @@ body {
     color: var(--buttonTextColor);
     transform: translateY(-20%);
     display: block;
+    height: 60px;
 }
 
 #cookie {
