@@ -77,7 +77,7 @@ function formatTime(seconds){
 
 //show only selected screen
 function showScreen(screenName){
-    console.log('Attempting to show screen:', screenName);//debug
+    //console.log('Attempting to show screen:', screenName);//debug
 
     mainscreen.style.display = 'none';
     selectionScreen.style.display = 'none';
@@ -89,10 +89,10 @@ function showScreen(screenName){
     if (screenName === 'timer') timerWaitingScreen.style.display = 'block'
     if (screenName === 'completion') timerCompleteScreen.style.display = 'block'
 
-    console.log('mainscreen display: ', mainscreen.style.display);//debug
-    console.log('selectionScreen display: ', selectionScreen.style.display);//debug
-    console.log('timerWaitingScreen display: ',timerWaitingScreen.style.display);//debug
-    console.log('timerCompleteScreen display: ',timerCompleteScreen.style.display);//debug
+    //console.log('mainscreen display: ', mainscreen.style.display);//debug
+    //console.log('selectionScreen display: ', selectionScreen.style.display);//debug
+    //console.log('timerWaitingScreen display: ',timerWaitingScreen.style.display);//debug
+    //console.log('timerCompleteScreen display: ',timerCompleteScreen.style.display);//debug
 }
 
 function startCountDown(selectedDuration, pastryText){
@@ -158,10 +158,10 @@ function stopAlarmSound(){
 
 //event listeners
 startBtn.addEventListener('click',()=>{
-    console.log('Start button clicked  - before pop and showScreen');//debug
+    //console.log('Start button clicked  - before pop and showScreen');//debug
     playPopSound();
     showScreen('selection');
-    console.log('Start button clicked - after pop and showScreen');//debug
+    //console.log('Start button clicked - after pop and showScreen');//debug
 });
 
 backBtn.addEventListener('click',()=>{
