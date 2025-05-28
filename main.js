@@ -34,7 +34,7 @@ const createWindow = () => {
   })
 
   win.loadFile('index.html')
-  win.webContents.openDevTools()//for debugging
+  // win.webContents.openDevTools()//for debugging
 }
 
 //wiats for whenReady then creates our browser window
