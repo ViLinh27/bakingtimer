@@ -100,6 +100,53 @@ All the art assets are designed by me in Pixelorama, a free pixel art app on itc
 
 I came to a point where the app worked in the browser just fine, but when launching the app via npm, the functionality was gone. Some sources mention its how Electron works with its security. It's the contextisolation part. The renderer doesn't have access to Node.js but preload is supposed to fix that.
 
+#### What the devtools say in electron app:
+
+##### 1 -fixed
+
+Refused to load the stylesheet 'https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap' because it violates the following Content Security Policy directive: "default-src 'self'". Note that 'style-src-elem' was not explicitly set, so 'default-src' is used as a fallback.
+index.html:16
+meta tag additions seems to have fixed this error
+
+##### 2-fixed
+
+Failed to load resource: net::ERR_FILE_NOT_FOUND
+bgtimer-dog_waiting.png:1
+
+##### 3-fixed
+
+Failed to load resource: net::ERR_FILE_NOT_FOUND
+oven-open.png:1
+
+##### 4-fixed
+
+Failed to load resource: net::ERR_FILE_NOT_FOUND
+bgtimer-dog_donetimer.png:1
+
+##### 5
+
+Failed to load resource: net::ERR_FILE_NOT_FOUND
+renderer.js:1
+
+##### 6-fixed
+
+Failed to load resource: net::ERR_FILE_NOT_FOUND
+oven-closed.png:1
+
+##### 7 -fixed
+
+Failed to load resource: net::ERR_FILE_NOT_FOUND
+bakingTimer-bg.png:1
+
+This seems to have fixed the resource loading errors 2,3,4,6,7 :
+https://stackoverflow.com/questions/72505239/failed-to-load-resource-neterr-file-not-found-using-im
+
+##### 8 -fixed
+
+Refused to load the stylesheet 'https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap' because it violates the following Content Security Policy directive: "default-src 'self'". Note that 'style-src-elem' was not explicitly set, so 'default-src' is used as a fallback.
+index.html:1
+This fixed the font error: https://stackoverflow.com/questions/68445115/electron-google-fonts-violates-content-security-policy
+
 ## sound attribution
 
 Pop 9 by D.S.G. -- https://freesound.org/s/328119/ -- License: Creative Commons 0

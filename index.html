@@ -4,7 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'"> -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; 
+              script-src 'self'; 
+              font-src 'self' https://fonts.gstatic.com;
+              style-src 'self' https://fonts.googleapis.com">
     <title>Hello World!</title>
 
     <link rel="stylesheet" href="styles.css" />
@@ -12,13 +16,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
 </head>
 
 <body>
-    <audio id="pop-sound" src="assets/audio/328119__dsg__pop-9.wav" preload="auto"></audio>
-    <audio id="alarm-sound" src="assets/audio/233645__zanox__alarm-clock-digital.wav" preload="auto"></audio>
+    <audio id="pop-sound" src="./assets/audio/328119__dsg__pop-9.wav" preload="auto"></audio>
+    <audio id="alarm-sound" src="./assets/audio/233645__zanox__alarm-clock-digital.wav" preload="auto"></audio>
     <div class="app-frame">
         <!-- main window frame: -->
         <h2 class="frame-text">Baking Timer</h2>
@@ -28,12 +32,12 @@
         <div class="window-controls">
             <!--custom min button-->
             <button id="min-btn" class="window-control">
-                <img src="assets/bakingtimer-minbutton.png" alt="Minimize"/>
+                <img src="./assets/bakingtimer-minbutton.png" alt="Minimize"/>
             </button>
 
             <!--custom exit button-->
             <button id="exit-btn" class="window-control">
-                <img src="assets/bakingtimer-exitbutton.png" alt="close"/>
+                <img src="./assets/bakingtimer-exitbutton.png" alt="close"/>
             </button>
 
         </div>
@@ -48,7 +52,7 @@
                             <p id="talkbubble-text">Time your bake for the best treat!</p>
                         </button>
 
-                        <img src="assets/startScreen/bgtimer-dog.png" class="decor-img" alt="dog mascot" id="dog-startmenu"/>
+                        <img src="./assets/startScreen/bgtimer-dog.png" class="decor-img" alt="dog mascot" id="dog-startmenu"/>
                     </div>
                     
                     <div class="interactive-content">
@@ -89,8 +93,8 @@
                 <div class="content-wrapper">
                     <!--above image-->
                     <div class="interactive-content">
-                        <img src="/assets/Working-Timing/oven-closed.png" alt="oven closed"/>
-                        <img src="/assets/Working-Timing/bgtimer-dog_waiting.png" alt="dog waiting"/>
+                        <img src="./assets/Working-Timing/oven-closed.png" alt="oven closed"/>
+                        <img src="./assets/Working-Timing/bgtimer-dog_waiting.png" alt="dog waiting"/>
                     </div>
                     <!--timer clock-->
                     <div class="interactive-content">
@@ -113,8 +117,8 @@
                 <div class="content-wrapper">
                     <!-- above image-->
                     <div class="interactive-content" id="above-image_block">
-                        <img src="/assets/Working-Timing/oven-open.png" alt="oven-open" alt="oven open"/>
-                        <img src="/assets/Working-Timing/bgtimer-dog_donetimer.png" alt="dog yay" alt="dog yay"/>
+                        <img src="./assets/Working-Timing/oven-open.png" alt="oven-open" alt="oven open"/>
+                        <img src="./assets/Working-Timing/bgtimer-dog_donetimer.png" alt="dog yay" alt="dog yay"/>
                     </div>
                     <!-- complete text-->
                     <div class="interactive-content">
@@ -126,7 +130,7 @@
                     <!--buttons-->
                     <div class="interactive-content">
                         <div class="timer-controls" id="complete-timer_btns">
-                            <button id="bake-again-btn"><p class="btn-text">Bake Again</p></button>maybe get rid of this button
+                            <!-- <button id="bake-again-btn"><p class="btn-text">Bake Again</p></button>maybe get rid of this button -->
                             <button id="snooze-alarm-btn"><p class="btn-text">Snooze</p></button>
                             <button id="back-btn"><p class="btn-text">Back</p></button>
                         </div>
@@ -138,7 +142,7 @@
 
     </div>
 
-    <script src="/renderer.js"></script>
+    <script src="./renderer.js"></script>
 </body>
 
 </html>
