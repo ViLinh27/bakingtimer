@@ -2,7 +2,7 @@
 
 This will be based on egg timer app by @bizbunny . She found a video by nashallery that seemed fun to replicate fom what I'm told.
 
-The goal of this project is to make a simple timer app to help teach myself Electron. The app will allow the user to set different times depending on the baked good chosen at the start.
+The goal of this project is to make a simple timer app to help teach myself Electron. The app will allow the user to set different times depending on the baked good chosen at the start. This project is for learning purposes only.
 
 # Process
 
