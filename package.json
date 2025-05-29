@@ -5,7 +5,22 @@
   "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "electron ."
+    "app:dir": "electron-builder --dir",
+    "app:dist": "electron-builder",
+    "postinstall":"electron-builder install-app-deps"
+  },
+  "build": {
+    "appId": "com.electron.bakingtimer",
+    "icon":"bakingtimer/assets/bakingtimericon.png",
+    "mac": {
+      "category": "public.app-category.utilities"
+    },
+    "win": {
+      "target": "nsis"
+    },
+    "directories":{
+      "output":"dist"
+    }
   },
   "repository": {
     "type": "git",
@@ -21,6 +36,10 @@
   },
   "homepage": "https://github.com/ViLinh27/bakingtimer#readme",
   "devDependencies": {
-    "electron": "^35.1.5"
+    "electron": "^35.1.5",
+    "electron-builder": "^26.0.12"
+  },
+  "dependencies": {
+    "electron-squirrel-startup": "^1.0.1"
   }
 }
